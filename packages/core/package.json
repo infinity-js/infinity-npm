@@ -1,0 +1,18 @@
+{
+  "name": "@infinity-js/core",
+  "version": "0.0.1",
+  "description": "Infinity - Uma biblioteca para suporte a desenvolvimento de aplicações web",
+  "author": "White Angel <whiteangel.dev>",
+  "license": "MIT",
+  "homepage": "https://infinityjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinity-js/infinity-npm"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}
