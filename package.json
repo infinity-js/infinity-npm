@@ -1,0 +1,22 @@
+{
+  "name": "@infinity-js/core",
+  "version": "0.0.1",
+  "description": "Uma biblioteca para gerenciar os serviços node da infinity",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinity-js/infinity-npm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infinity-js/infinity-npm/issues"
+  },
+  "homepage": "https://github.com/infinity-js/infinity-npm#readme",
+  "devDependencies": {
+    "lerna": "2.11.0"
+  }
+}
