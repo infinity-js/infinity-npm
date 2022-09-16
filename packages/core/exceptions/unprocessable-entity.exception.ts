@@ -1,4 +1,4 @@
-import { HttpStatus, RpcStatus } from 'enums';
+import { HttpStatus, RpcStatus } from '../enums';
 import { InfinityGlobalException } from './global.exception';
 
 type UnprocessableEntityExceptionParamsDTO = {
