@@ -1,0 +1,20 @@
+{
+  "name": "@infinity-js/models",
+  "version": "0.0.1",
+  "description": "Infinity - Uma biblioteca para guardar os objetos que transitam nos serviços",
+  "author": "White Angel <whiteangel.dev>",
+  "license": "MIT",
+  "homepage": "https://infinityjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinity-js/infinity-npm"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@infinity-js/core": "0.0.1"
+  },
+  "peerDependencies": {}
+}
