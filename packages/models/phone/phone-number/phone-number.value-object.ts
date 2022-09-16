@@ -12,6 +12,18 @@ export class PhoneNumber {
     this._number = data.number;
   }
 
+  get ddi(): string {
+    return this._ddi;
+  }
+
+  get ddd(): string {
+    return this._ddd;
+  }
+
+  get number(): string {
+    return this._number;
+  }
+
   static instantiate(data: PhoneNumberData): PhoneNumber {
     PhoneNumber.validate(data);
     return new PhoneNumber(data);
@@ -19,5 +31,13 @@ export class PhoneNumber {
 
   static validate(data?: PhoneNumberData) {
     validateEntity(PhoneNumberData, data);
+  }
+
+  toJSON(): PhoneNumberData {
+    return {
+      ddi: this.ddi,
+      ddd: this.ddd,
+      number: this.number,
+    };
   }
 }
