@@ -1,6 +1,6 @@
 import { plainToInstance } from 'class-transformer';
 import { validateSync } from 'class-validator';
-import { UnprocessableEntityException } from 'exceptions';
+import { UnprocessableEntityException } from '../exceptions';
 import { MessageFormatter } from './class-validator';
 
 export function validateEntity<T extends object>(
