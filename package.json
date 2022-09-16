@@ -5,7 +5,8 @@
   "author": "White Angel <whiteangel.dev>",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -17,14 +18,26 @@
   },
   "homepage": "https://github.com/infinity-js/infinity-npm#readme",
   "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-angular": "17.1.0",
     "@types/node": "18.7.17",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
+    "husky": "8.0.1",
     "lerna": "2.11.0",
+    "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "typescript": "4.8.2"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ],
+    "packages/**/*.json": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ]
   }
 }
