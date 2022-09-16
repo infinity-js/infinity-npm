@@ -1,3 +1,5 @@
+import { v4 as uuidV4 } from 'uuid';
+
 export type InfinityGlobalExceptionParamsDTO = {
   message: string;
   portugueseMessage: string;
@@ -7,6 +9,7 @@ export type InfinityGlobalExceptionParamsDTO = {
 };
 
 export class InfinityGlobalException extends Error {
+  errorId: string = uuidV4();
   portugueseMessage: string;
   statusCode: number;
   rpcCode: number;
