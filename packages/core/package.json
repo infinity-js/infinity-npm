@@ -12,7 +12,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
+  "dependencies": {
+    "uuid": "9.0.0",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.13.2"
+  },
   "devDependencies": {},
-  "peerDependencies": {}
+  "peerDependencies": {
+    "uuid": "9.0.0",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.13.2"
+  }
 }
