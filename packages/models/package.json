@@ -12,9 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@infinity-js/core": "0.0.1"
-  },
-  "peerDependencies": {}
+  }
 }
