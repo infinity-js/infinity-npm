@@ -7,6 +7,7 @@
     "removeComments": true,
     "noLib": false,
     "emitDecoratorMetadata": true,
+    "strict": true,
     "experimentalDecorators": true,
     "useUnknownInCatchVariables": false,
     "target": "es6",
