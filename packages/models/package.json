@@ -13,6 +13,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@infinity-js/core": "0.0.1"
+    "@infinity-js/core": "0.0.1",
+    "tslib": "2.4.0"
   }
 }
