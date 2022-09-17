@@ -4,6 +4,8 @@
   "description": "Infinity - Uma biblioteca para guardar os objetos que transitam nos serviços",
   "author": "White Angel <whiteangel.dev>",
   "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
   "homepage": "https://infinityjs.com",
   "repository": {
     "type": "git",
@@ -13,7 +15,17 @@
     "access": "public"
   },
   "dependencies": {
-    "@infinity-js/core": "0.0.1",
     "tslib": "2.4.0"
+  },
+  "devDependencies": {
+    "@infinity-js/core": "0.0.1"
+  },
+  "peerDependencies": {
+    "@infinity-js/core": "0.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@infinity-js/core": {
+      "optional": true
+    }
   }
 }
