@@ -5,6 +5,9 @@
   "author": "White Angel <whiteangel.dev>",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build --dist node_modules/@infinity-js",
+    "build:prod": "gulp build",
+    "clean": "gulp clean:bundle",
     "test": "nyc mocha packages/**/*.spec.ts --reporter spec",
     "prepare": "husky install"
   },
@@ -44,6 +47,8 @@
     "mocha": "10.0.0",
     "gulp": "4.0.2",
     "gulp-clean": "0.4.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-typescript": "5.0.1",
     "sinon": "14.0.0",
     "sinon-chai": "3.7.0",
     "lint-staged": "13.0.3",
