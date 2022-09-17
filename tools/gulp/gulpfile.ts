@@ -1,1 +1,1 @@
-export default {};
+import './tasks/clean';
