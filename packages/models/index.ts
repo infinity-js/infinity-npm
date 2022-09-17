@@ -1,3 +1,1 @@
-/**
- * Models index
- */
+export * from './phone';
