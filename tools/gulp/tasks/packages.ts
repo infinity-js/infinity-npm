@@ -8,6 +8,7 @@ import * as log from 'fancy-log';
 const packages = {
   core: createProject('packages/core/tsconfig.json'),
   models: createProject('packages/models/tsconfig.json'),
+  nestjs: createProject('packages/nestjs/tsconfig.json'),
 };
 
 const modules = Object.keys(packages);

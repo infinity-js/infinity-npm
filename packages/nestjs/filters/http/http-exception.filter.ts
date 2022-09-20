@@ -1,4 +1,4 @@
-import { RestExceptionContract } from '@infinity-js/core/contracts';
+import { HttpExceptionContract } from '@infinity-js/core/contracts';
 import {
   ArgumentsHost,
   Catch,
@@ -13,12 +13,39 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const ctx = host.switchToHttp();
     const response = ctx.getResponse<Response>();
 
-    const exceptionToReturn: RestExceptionContract = {
+    const exceptionResponse = exception.getResponse();
+
+    const message: string[] = this.parseMessage(
+      exceptionResponse,
+      exception.message,
+    );
+
+    const exceptionToReturn: HttpExceptionContract = {
       statusCode: exception.getStatus(),
-      message: [exception.message],
       name: exception.name,
+      message,
     };
 
     response.status(exception.getStatus()).json(exceptionToReturn);
+  }
+
+  private parseMessage(message: any, defaultMessage: string): string[] {
+    if (typeof message === 'string') {
+      return [message];
+    }
+
+    if (typeof message === 'object') {
+      const messageInsideResponse = message['message'];
+
+      if (typeof messageInsideResponse === 'string') {
+        return [messageInsideResponse];
+      }
+
+      if (Array.isArray(messageInsideResponse)) {
+        return messageInsideResponse;
+      }
+    }
+
+    return [defaultMessage];
   }
 }
