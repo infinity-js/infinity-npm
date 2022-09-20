@@ -1,0 +1,20 @@
+{
+  "name": "@infinity-js/nestjs",
+  "version": "1.1.4",
+  "description": "Infinity - Uma biblioteca para guardar utilitários e classes para o NestJS",
+  "author": "White Angel <whiteangel.dev>",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "homepage": "https://infinityjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinity-js/infinity-npm"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tslib": "2.4.0"
+  }
+}
