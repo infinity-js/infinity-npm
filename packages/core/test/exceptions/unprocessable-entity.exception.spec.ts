@@ -6,7 +6,7 @@ describe('UnprocessableEntityException', () => {
 
   beforeEach(() => {
     exception = new UnprocessableEntityException({
-      entity: 'Test',
+      entityName: 'Test',
       message: 'Test Exception Message',
       portugueseMessage: 'Test Exception Message PT',
     });
@@ -18,8 +18,12 @@ describe('UnprocessableEntityException', () => {
 
   it('should have a name', () => {
     expect(exception.name).to.be.equal(
-      'InfinityGlobalException: UnprocessableEntityException (Test)',
+      'InfinityException: UnprocessableEntityException',
     );
+  });
+
+  it('should have a entityName', () => {
+    expect(exception.entityName).to.be.equal('Test');
   });
 
   it('should have a message', () => {

@@ -1,24 +1,24 @@
 import { expect } from 'chai';
-import { InfinityException } from '../../exceptions/global.exception';
-describe('GlobalException', () => {
-  let exception: InfinityException;
+import { AlreadyExistsException } from '../../exceptions/already-exists.exception';
+
+describe('AlreadyExistsException', () => {
+  let exception: AlreadyExistsException;
 
   beforeEach(() => {
-    exception = new InfinityException({
-      name: 'Test Exception',
+    exception = new AlreadyExistsException({
       message: 'Test Exception Message',
       portugueseMessage: 'Test Exception Message PT',
-      rpcCode: 1,
-      statusCode: 1,
     });
   });
 
   it('should be defined', () => {
-    expect(exception).to.be.instanceOf(InfinityException);
+    expect(exception).to.be.instanceOf(AlreadyExistsException);
   });
 
   it('should have a name', () => {
-    expect(exception.name).to.be.equal('InfinityException: Test Exception');
+    expect(exception.name).to.be.equal(
+      'InfinityException: AlreadyExistsException',
+    );
   });
 
   it('should have a message', () => {
@@ -32,11 +32,11 @@ describe('GlobalException', () => {
   });
 
   it('should have a statusCode', () => {
-    expect(exception.statusCode).to.be.equal(1);
+    expect(exception.statusCode).to.be.equal(400);
   });
 
   it('should have a rpcCode', () => {
-    expect(exception.rpcCode).to.be.equal(1);
+    expect(exception.rpcCode).to.be.equal(6);
   });
 
   it('should have a errorId', () => {
