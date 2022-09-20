@@ -1,12 +1,12 @@
 import { HttpStatus, RpcStatus } from '../enums';
-import { InfinityGlobalException } from './global.exception';
+import { InfinityException } from './global.exception';
 
 type AlreadyExistsExceptionParamsDTO = {
   message: string;
   portugueseMessage: string;
 };
 
-export class AlreadyExistsException extends InfinityGlobalException {
+export class AlreadyExistsException extends InfinityException {
   constructor(params: AlreadyExistsExceptionParamsDTO) {
     super({
       name: `AlreadyExistsException`,

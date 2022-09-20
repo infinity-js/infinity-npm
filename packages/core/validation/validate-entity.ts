@@ -9,7 +9,7 @@ export function validateEntity<T extends object>(
 ) {
   if (!data) {
     throw new UnprocessableEntityException({
-      entity: classValue.name,
+      entityName: classValue.name,
       message: 'Data is required',
       portugueseMessage: 'Dados são obrigatórios',
     });
@@ -21,7 +21,7 @@ export function validateEntity<T extends object>(
 
   if (errors.length > 0) {
     throw new UnprocessableEntityException({
-      entity: classValue.name,
+      entityName: classValue.name,
       message: JSON.stringify(MessageFormatter.format(errors)),
       portugueseMessage: 'Falha na validação',
     });

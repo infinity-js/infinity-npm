@@ -1,20 +1,24 @@
 import { HttpStatus, RpcStatus } from '../enums';
-import { InfinityGlobalException } from './global.exception';
+import { InfinityException } from './global.exception';
 
 type UnprocessableEntityExceptionParamsDTO = {
-  entity: string;
+  entityName: string;
   message: string;
   portugueseMessage: string;
 };
 
-export class UnprocessableEntityException extends InfinityGlobalException {
+export class UnprocessableEntityException extends InfinityException {
+  entityName: string;
+
   constructor(params: UnprocessableEntityExceptionParamsDTO) {
     super({
-      name: `UnprocessableEntityException (${params.entity})`,
+      name: 'UnprocessableEntityException',
       message: params.message,
       portugueseMessage: params.portugueseMessage,
       rpcCode: RpcStatus.INVALID_ARGUMENT,
       statusCode: HttpStatus.UNPROCESSABLE_ENTITY,
     });
+
+    this.entityName = params.entityName;
   }
 }

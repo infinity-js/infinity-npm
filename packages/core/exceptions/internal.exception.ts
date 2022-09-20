@@ -1,12 +1,12 @@
 import { HttpStatus, RpcStatus } from '../enums';
-import { InfinityGlobalException } from './global.exception';
+import { InfinityException } from './global.exception';
 
 type InternalExceptionParamsDTO = {
   message: string;
   portugueseMessage: string;
 };
 
-export class InternalException extends InfinityGlobalException {
+export class InternalException extends InfinityException {
   constructor(params: InternalExceptionParamsDTO) {
     super({
       name: `InternalException`,
