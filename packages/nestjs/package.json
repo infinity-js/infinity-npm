@@ -1,6 +1,6 @@
 {
   "name": "@infinity-js/nestjs",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Infinity - Uma biblioteca para guardar utilitários e classes para o NestJS",
   "author": "White Angel <whiteangel.dev>",
   "license": "MIT",
