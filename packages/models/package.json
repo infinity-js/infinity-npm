@@ -1,6 +1,6 @@
 {
   "name": "@infinity-js/models",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Infinity - Uma biblioteca para guardar os objetos que transitam nos serviços",
   "author": "White Angel <whiteangel.dev>",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@infinity-js/core": "1.1.4",
+    "@infinity-js/core": "1.2.0",
     "tslib": "2.4.0"
   }
 }
